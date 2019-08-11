@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Programming Language {% endblock %}
+{% block content %}
+    {% include 'crud/header.html' %}
+    {% for post in object_list %}
+    
+       <ul>
+            <div class="alert alert-primary" role="alert">
+                <h3 class='display-4'> {{ post.language }} </h3> 
+                <a class="btn btn-primary" href='{{ post.get_absolute_url }}'>View</a>
+            </div>
+            <p class="alert alert-info"> <cite title='Source Title'>{{ post.creator }} </cite> </p>
+            <div class="card card-body">
+                <p class="lead" > {{post.description }} </p>
+            </div>
+            
+       </ul>
+    {% endfor %}
+{% endblock %}
+    

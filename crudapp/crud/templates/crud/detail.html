@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %} {{ detail.language }} {% endblock %}
+{% block content %}
+    {% include 'crud/header.html'%}
+    <div class="alert alert-primary" role="alert">
+        <h3 class='display-4'> {{ detail.language }} </h3> 
+    </div>
+    <p class="alert alert-info"> <cite title='Source Title'>{{ detail.creator }} </cite> </p>
+    <div class="card card-body">
+        <p class="lead"> {{detail.description }} </p>
+    </div>   
+{% endblock %}
